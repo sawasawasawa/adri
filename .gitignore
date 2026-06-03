@@ -7,3 +7,6 @@ photos/
 
 # Internal planning, brief, and client voice-note transcripts (not for publishing)
 Plans/
+
+# git worktrees
+.worktrees/
