@@ -1,3 +1,9 @@
 .DS_Store
 node_modules/
 *.log
+
+# Raw, unoptimized source photos (web-ready copies live in images/)
+photos/
+
+# Internal planning, brief, and client voice-note transcripts (not for publishing)
+Plans/

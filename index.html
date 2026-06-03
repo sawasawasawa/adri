@@ -3,56 +3,185 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>adri</title>
-  <meta name="description" content="adri — a small corner of the internet." />
+  <script>document.documentElement.classList.add('js');</script>
+  <title>Elegant Rescues</title>
+  <meta name="description" content="Elegant Rescues. Restoration, maintenance, and conservation of fine art and high-value objects. Restoring Memories." />
+  <meta name="theme-color" content="#0e0c0a" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20rx='6'%20fill='%230e0c0a'/%3E%3Cpath%20d='M16%204%20C13%2011%2019%2015%2016%2021%20C14%2025%2016%2027%2016%2028'%20fill='none'%20stroke='%23e8cf86'%20stroke-width='2'%20stroke-linecap='round'/%3E%3C/svg%3E" />
+
+  <!-- Open Graph (placeholder image to be replaced later) -->
+  <meta property="og:title" content="Elegant Rescues" />
+  <meta property="og:description" content="Restoration, maintenance, and conservation of fine art and high-value objects." />
+  <meta property="og:type" content="website" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Hanken+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
   <div class="grain" aria-hidden="true"></div>
+  <div class="glow" aria-hidden="true"></div>
+
+  <!-- thin gold kintsugi seam running down the left edge as a connective motif -->
+  <svg class="spine" viewBox="0 0 8 1000" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M4 0 C7 80 1 150 4 230 C7 310 1 380 4 460 C7 540 1 610 4 690 C7 770 1 840 4 920 C6 960 4 985 4 1000"
+          fill="none" stroke="url(#goldspine)" stroke-width="1.4" />
+    <defs>
+      <linearGradient id="goldspine" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#0e0c0a" />
+        <stop offset="0.12" stop-color="#caa24a" />
+        <stop offset="0.5" stop-color="#e8cf86" />
+        <stop offset="0.88" stop-color="#caa24a" />
+        <stop offset="1" stop-color="#0e0c0a" />
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <a class="skip" href="#about">Skip to content</a>
 
   <main class="stage">
-    <section class="hero">
-      <p class="eyebrow">est. 2026</p>
-      <h1 class="wordmark">adri</h1>
-      <p class="tagline">A small corner of the internet, under construction with intent.</p>
 
-      <nav class="links" aria-label="primary">
-        <a href="#about">about</a>
-        <a href="#work">work</a>
-        <a href="mailto:hello@example.com">say hi</a>
-      </nav>
+    <!-- ============ SECTION 1 - ABOUT (top, with image) ============ -->
+    <section id="about" class="hero panel reveal" aria-labelledby="about-h">
+      <div class="hero__copy">
+        <p class="eyebrow">Restoration · Maintenance · Conservation</p>
+        <h1 class="wordmark" aria-label="Elegant Rescues">Elegant<span>Rescues</span></h1>
+        <p class="slogan"><span class="seam-mark">Restoring Memories</span></p>
+
+        <h2 id="about-h" class="lead-label">About</h2>
+        <p class="lead" data-placeholder>
+          Placeholder. A short introduction to Elegant Rescues goes here: who you are,
+          your craft, and the care you bring to objects people treasure. Replace this
+          copy later. Like Kintsugi, we treat repair as something worth seeing, mending
+          what is broken with patience and a line of gold.
+        </p>
+
+        <nav class="links" aria-label="Primary">
+          <a href="#services">Services</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#connect">Connect</a>
+        </nav>
+      </div>
+
+      <figure class="hero__image frame">
+        <div class="frame__media">
+          <img src="./images/restoration-01.jpg"
+               alt="Restoration work by Elegant Rescues" loading="eager" decoding="async" />
+        </div>
+        <figcaption>Conservation and restoration, in progress.</figcaption>
+      </figure>
     </section>
 
-    <section id="about" class="panel">
-      <h2>about</h2>
-      <p>This page is the seed. Replace this copy with whatever <em>adri</em> is going to be: a portfolio, a journal, a launchpad, a quiet hello. The bones are clean and the deploy is automatic, so you only ever edit words and ship.</p>
+    <!-- ============ SECTION 2 - SERVICES & WORKSHOPS (split) ============ -->
+    <section id="services" class="duo panel reveal" aria-label="Services and Workshops">
+      <div class="duo__col">
+        <h2 class="section-h">Services</h2>
+        <p class="muted" data-placeholder>
+          Placeholder intro. A line about how you approach each commission, for collectors
+          and custodians of valuable pieces. Replace later.
+        </p>
+        <ul class="service-list">
+          <li><span class="srv-rule" aria-hidden="true"></span>Metal objects</li>
+          <li><span class="srv-rule" aria-hidden="true"></span>Historic buildings</li>
+          <li><span class="srv-rule" aria-hidden="true"></span>Ceramics</li>
+          <li><span class="srv-rule" aria-hidden="true"></span>Paper</li>
+          <li><span class="srv-rule" aria-hidden="true"></span>Furniture</li>
+        </ul>
+        <p class="micro muted">Restoration, maintenance, and conservation across each category.</p>
+      </div>
+
+      <div class="duo__col duo__col--alt">
+        <h2 class="section-h">Workshops</h2>
+        <p class="muted" data-placeholder>
+          Placeholder. Describe your workshops here: what they cover, who they are for,
+          and how to take part. Replace this copy once details are confirmed.
+        </p>
+        <ul class="service-list service-list--ghost">
+          <li><span class="srv-rule" aria-hidden="true"></span>Workshop detail one</li>
+          <li><span class="srv-rule" aria-hidden="true"></span>Workshop detail two</li>
+          <li><span class="srv-rule" aria-hidden="true"></span>Workshop detail three</li>
+        </ul>
+        <p class="micro muted" data-placeholder>Dates and booking to be added later.</p>
+      </div>
     </section>
 
-    <section id="work" class="panel">
-      <h2>work</h2>
-      <ul class="cards">
-        <li class="card">
-          <h3>First thing</h3>
-          <p>Drop a project, a link, or a thought here.</p>
-        </li>
-        <li class="card">
-          <h3>Second thing</h3>
-          <p>Duplicate this card to add more.</p>
-        </li>
-        <li class="card">
-          <h3>Third thing</h3>
-          <p>Keep it sparse. White space is a feature.</p>
-        </li>
-      </ul>
+    <!-- ============ SECTION 3 - ROTATING GALLERY ============ -->
+    <section id="gallery" class="gallery panel reveal" aria-label="Gallery">
+      <h2 class="section-h">Gallery</h2>
+      <p class="muted gallery__intro" data-placeholder>Placeholder gallery. Before-and-after work will appear here.</p>
+
+      <div class="carousel" data-carousel aria-roledescription="carousel" aria-label="Restoration work">
+        <div class="carousel__viewport">
+          <ul class="carousel__track" data-track>
+            <li class="slide" role="group" aria-roledescription="slide" aria-label="1 of 4">
+              <figure class="frame frame--wide">
+                <div class="frame__media">
+                  <img src="./images/restoration-01.jpg"
+                       alt="Restoration project by Elegant Rescues" loading="eager" decoding="async" />
+                </div>
+                <figcaption>Restoration project. Elegant Rescues.</figcaption>
+              </figure>
+            </li>
+            <li class="slide" role="group" aria-roledescription="slide" aria-label="2 of 4">
+              <figure class="frame frame--wide">
+                <div class="frame__placeholder" role="img" aria-label="Gallery placeholder two">
+                  <svg class="crack" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="800" height="500" fill="#13110e"/><path d="M260 0 C300 130 220 220 300 320 S260 440 320 500" fill="none" stroke="url(#g2)" stroke-width="2.6"/><path d="M300 240 C220 270 160 250 60 300" fill="none" stroke="url(#g2)" stroke-width="1.4" opacity="0.7"/><defs><linearGradient id="g2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#caa24a"/><stop offset="0.5" stop-color="#f0da93"/><stop offset="1" stop-color="#b88a33"/></linearGradient></defs></svg>
+                  <span class="frame__tag">Placeholder · gallery 02</span>
+                </div>
+                <figcaption>Restoration sample two. To be added later.</figcaption>
+              </figure>
+            </li>
+            <li class="slide" role="group" aria-roledescription="slide" aria-label="3 of 4">
+              <figure class="frame frame--wide">
+                <div class="frame__placeholder" role="img" aria-label="Gallery placeholder three">
+                  <svg class="crack" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="800" height="500" fill="#16130f"/><path d="M540 0 C500 120 600 210 520 320 S560 450 500 500" fill="none" stroke="url(#g3)" stroke-width="2.6"/><path d="M520 200 C600 230 660 210 760 250" fill="none" stroke="url(#g3)" stroke-width="1.4" opacity="0.7"/><defs><linearGradient id="g3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#caa24a"/><stop offset="0.5" stop-color="#f0da93"/><stop offset="1" stop-color="#b88a33"/></linearGradient></defs></svg>
+                  <span class="frame__tag">Placeholder · gallery 03</span>
+                </div>
+                <figcaption>Restoration sample three. To be added later.</figcaption>
+              </figure>
+            </li>
+            <li class="slide" role="group" aria-roledescription="slide" aria-label="4 of 4">
+              <figure class="frame frame--wide">
+                <div class="frame__placeholder" role="img" aria-label="Gallery placeholder four">
+                  <svg class="crack" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="800" height="500" fill="#141109"/><path d="M380 0 C420 110 340 210 420 300 S380 430 400 500" fill="none" stroke="url(#g4)" stroke-width="2.6"/><path d="M400 260 C480 250 540 280 660 270" fill="none" stroke="url(#g4)" stroke-width="1.4" opacity="0.7"/><defs><linearGradient id="g4" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#caa24a"/><stop offset="0.5" stop-color="#f0da93"/><stop offset="1" stop-color="#b88a33"/></linearGradient></defs></svg>
+                  <span class="frame__tag">Placeholder · gallery 04</span>
+                </div>
+                <figcaption>Restoration sample four. To be added later.</figcaption>
+              </figure>
+            </li>
+          </ul>
+        </div>
+
+        <div class="carousel__controls">
+          <button class="carousel__btn" data-prev type="button" aria-label="Previous slide">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="carousel__dots" data-dots role="tablist" aria-label="Choose slide"></div>
+          <button class="carousel__btn" data-next type="button" aria-label="Next slide">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer class="foot">
-    <span>adri</span>
-    <span>built &amp; deployed via GitHub Pages</span>
+  <!-- ============ SECTION 4 - TINY SOCIAL FOOTER ============ -->
+  <footer id="connect" class="foot reveal">
+    <span class="foot__name">Elegant Rescues</span>
+    <nav class="foot__social" aria-label="Social media">
+      <a href="#" data-placeholder-link aria-label="Instagram (link to be added)">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor"/></svg>
+        <span>Instagram</span>
+      </a>
+      <a href="#" data-placeholder-link aria-label="LinkedIn (link to be added)">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M7 10v7M7 7v.01M11 17v-4a2 2 0 014 0v4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        <span>LinkedIn</span>
+      </a>
+    </nav>
+    <span class="foot__slogan">Restoring Memories</span>
   </footer>
+
+  <script src="./gallery.js" defer></script>
 </body>
 </html>
